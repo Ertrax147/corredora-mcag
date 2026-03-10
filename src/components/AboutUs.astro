@@ -15,14 +15,14 @@ const timeline = [
 ];
 ---
 
-<section id="nosotros" class="py-24 bg-slate-50/50">
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<section id="nosotros" class="py-24 bg-slate-50">
+  <div class="max-w-7xl mx-auto px-4">
     <div class="text-center mb-16">
       <span
         class="text-blue-600 font-bold text-xs uppercase tracking-widest bg-blue-50 px-3 py-1 rounded-full"
         >Nosotros</span
       >
-      <h2 class="text-4xl font-black text-slate-900 mt-6 mb-4">
+      <h2 class="text-4xl font-black text-slate-900 mt-6 mb-4 text-balance">
         Confianza que Construye Hogares
       </h2>
       <p class="text-gray-500 max-w-2xl mx-auto italic">
@@ -36,7 +36,7 @@ const timeline = [
         stats.map((stat) => (
           <div class="bg-white p-8 rounded-3xl border border-gray-100 shadow-sm text-center">
             <p class="text-4xl font-black text-slate-900 mb-2">{stat.value}</p>
-            <p class="text-gray-400 text-xs uppercase font-bold tracking-tighter">
+            <p class="text-gray-400 text-xs uppercase font-bold tracking-widest">
               {stat.label}
             </p>
           </div>
@@ -45,25 +45,21 @@ const timeline = [
     </div>
 
     <div class="relative">
-      <h3 class="text-center text-xl font-bold text-slate-900 mb-12 italic">
+      <h3 class="text-center text-xl font-bold text-slate-900 mb-12">
         Nuestra Trayectoria
       </h3>
-
       <div
-        class="hidden lg:block absolute top-[5.5rem] left-0 w-full h-0.5 bg-gray-200"
+        class="hidden lg:block absolute top-6 left-0 w-full h-0.5 bg-gray-200"
       >
       </div>
-
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
         {
           timeline.map((item) => (
-            <div class="relative bg-white p-6 rounded-2xl border border-gray-100 shadow-sm z-10 text-center">
-              <div class="w-12 h-12 bg-[#0f172a] text-white rounded-xl flex items-center justify-center font-bold mb-4 mx-auto shadow-lg">
+            <div class="relative z-10 text-center">
+              <div class="w-12 h-12 bg-slate-900 text-white rounded-xl flex items-center justify-center font-bold mb-4 mx-auto shadow-lg">
                 {item.year}
               </div>
-              <p class="text-slate-700 font-medium text-sm italic">
-                {item.title}
-              </p>
+              <p class="text-slate-700 font-medium text-sm">{item.title}</p>
             </div>
           ))
         }

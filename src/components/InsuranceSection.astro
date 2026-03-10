@@ -1,0 +1,62 @@
+---
+const services = [
+  {
+    title: "Seguros de Hogar",
+    icon: "🏠",
+    color: "bg-blue-500",
+    desc: "Protección total para tu propiedad y contenidos.",
+  },
+  {
+    title: "Seguros de Auto",
+    icon: "🚗",
+    color: "bg-indigo-500",
+    desc: "Cobertura completa con asistencia 24/7.",
+  },
+  {
+    title: "Seguros de Vida",
+    icon: "💜",
+    color: "bg-purple-500",
+    desc: "Protege el futuro financiero de tu familia.",
+  },
+  {
+    title: "Comerciales",
+    icon: "💼",
+    color: "bg-pink-500",
+    desc: "Soluciones integrales para empresas.",
+  },
+];
+---
+
+<section id="seguros" class="py-24 bg-slate-50">
+  <div class="max-w-7xl mx-auto px-4 text-center mb-16">
+    <span
+      class="text-blue-600 font-bold text-xs uppercase tracking-[0.2em] bg-blue-50 px-4 py-2 rounded-full border border-blue-100"
+      >Servicio Complementario</span
+    >
+    <h2 class="text-4xl font-black text-slate-900 mt-6 mb-4">
+      Seguros y Protección Integral
+    </h2>
+    <p class="text-gray-500 max-w-2xl mx-auto">
+      Protege tu inversión con las mejores opciones de seguros del mercado,
+      asesorado por expertos.
+    </p>
+  </div>
+
+  <div
+    class="max-w-7xl mx-auto px-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"
+  >
+    {
+      services.map((s) => (
+        <div class="bg-white p-8 rounded-3xl border border-gray-100 shadow-sm hover:shadow-md transition-all">
+          <div
+            class={`${s.color} w-12 h-12 rounded-2xl flex items-center justify-center text-2xl mb-6 shadow-lg shadow-current/20`}
+          >
+            {s.icon}
+          </div>
+          <h3 class="text-xl font-bold text-slate-900 mb-3">{s.title}</h3>
+          <p class="text-gray-500 text-sm leading-relaxed">{s.desc}</p>
+        </div>
+      ))
+    }
+  </div>
+</section>

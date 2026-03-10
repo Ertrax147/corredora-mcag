@@ -1,0 +1,70 @@
+---
+// src/components/FeaturedProperties.astro
+import PropertyCard from "./PropertyCard.astro";
+
+const properties = [
+  {
+    title: "Casa Contemporánea Premium",
+    location: "Vitacura, Santiago",
+    price: "$450.000.000",
+    image:
+      "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?q=80&w=800",
+    type: "Venta" as const,
+    beds: 5,
+    baths: 4,
+    sqm: 380,
+    isTop: true,
+  },
+  {
+    title: "Departamento Vista Panorámica",
+    location: "Las Condes, Santiago",
+    price: "$1.200.000 / mes",
+    image:
+      "https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?q=80&w=800",
+    type: "Arriendo" as const,
+    beds: 2,
+    baths: 2,
+    sqm: 145,
+    isTop: true,
+  },
+  {
+    title: "Townhouse Moderna",
+    location: "Providencia, Santiago",
+    price: "$310.000.000",
+    image:
+      "https://images.unsplash.com/photo-1600566752355-35792bedcfea?q=80&w=800",
+    type: "Venta" as const,
+    beds: 3,
+    baths: 3,
+    sqm: 220,
+  },
+];
+---
+
+<section id="propiedades" class="py-24 bg-white">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex justify-between items-end mb-12">
+      <div>
+        <span
+          class="text-blue-600 font-bold text-xs uppercase tracking-widest bg-blue-50 px-3 py-1 rounded-full"
+          >Propiedades</span
+        >
+        <h2 class="text-4xl font-black text-slate-900 mt-4">
+          Destacados del Mes
+        </h2>
+        <p class="text-gray-500 mt-2">
+          Selección exclusiva de propiedades premium en las mejores ubicaciones.
+        </p>
+      </div>
+      <a
+        href="#"
+        class="hidden md:block text-blue-600 font-bold text-sm hover:underline italic"
+        >Ver Todo el Catálogo →</a
+      >
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      {properties.map((prop) => <PropertyCard {...prop} />)}
+    </div>
+  </div>
+</section>
